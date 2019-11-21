@@ -15,7 +15,6 @@ body {
 .container {
 	height: 100vh;
 	padding: 10px;
-	margin: 10px;
 }
 
 .row {
@@ -25,6 +24,7 @@ body {
 
 .columns {
 	display: flex;
+    flex-wrap: wrap;
 	align-items: flex-start;
 }
 
@@ -38,9 +38,11 @@ body {
 .column {
     background: #f1f1f1;
     padding: 10px 15px;
+    margin-bottom: 30px;
 }
 
 .adder {
+    flex-shrink: 0;
     background: rgba(241, 241, 241, 0.5);
     padding: 0;
     transition: all 0.2s ease;
@@ -126,4 +128,28 @@ body {
 
 .note.under {
 	opacity: 0.5;
+}
+
+.trash {
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    background: rgba(241, 241, 241, 0.7);
+    padding: 20px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.trash span {
+    display: block;
+    font-size: 14px;
+    line-height: 1;
+    font-weight: 700;
+    color: rgb(82, 82, 82);
+    margin: 0;
+    padding: 15px 20px;
+}
+
+.trash.under {
+    background: rgba(241, 241, 241, 0.5);
 }
